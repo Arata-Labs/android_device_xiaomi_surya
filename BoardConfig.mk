@@ -161,6 +161,11 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
+# Axion sepolicy
+ifeq ($(IS_AXION),true)
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/axion
+endif
+
 # Vendor security patch level
 VENDOR_SECURITY_PATCH := 2023-06-01
 
