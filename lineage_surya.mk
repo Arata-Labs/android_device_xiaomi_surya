@@ -34,6 +34,15 @@ ifeq ($(IS_AXION),true)
     endif
 endif
 
+# OrionOS flags
+ifeq ($(IS_ORION),true)
+    ORION_MAINTAINER := Skyy丨アラタ
+    ORION_GAPPS := true
+    WITH_GMS := true
+    TARGET_ENABLE_BLUR := true
+    TARGET_BOOT_ANIMATION_RES := 1080
+endif
+
 # Device manufacturer
 PRODUCT_NAME := lineage_surya
 PRODUCT_DEVICE := surya
